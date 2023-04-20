@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <h1>EECS 348 Lab Seven Practice Two</h1>
+</head>
+
+
+<style>
+body {
+   background-color: aqua;
+}
+
+#paragraph {
+  border-style: solid;
+  border-width: 5px;
+  width: 25%;
+  text-align: center;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+      label {
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"] {
+        padding: 5px;
+        border: 2px solid gray;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #3e8e41;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #4CAF50;
+      }
+
+</style>
+
+<body>
+    <div id="paragraph">
+
+
+        Paragraph to be altered.
+
+    </div>
+    <br> 
+<script type="text/javascript">
+    function change_color() {
+        var borderRed = document.getElementById("borderRed").value;
+        var borderGreen = document.getElementById("borderGreen").value;
+        var borderBlue = document.getElementById("borderBlue").value;
+        var borderWidth = document.getElementById("borderWidth").value;
+        var bgRed = document.getElementById("bgRed").value;
+        var bgGreen = document.getElementById("bgGreen").value;
+        var bgBlue = document.getElementById("bgBlue").value;
+
+        var tag = document.getElementById("paragraph");
+        tag.style.borderColor = `rgb(${borderRed},${borderGreen},${borderBlue})`;
+        tag.style.borderWidth = borderWidth;
+        tag.style.backgroundColor = `rgb(${bgRed},${bgGreen},${bgBlue})`;
+    }
+</script>
+
+    Border Red (0-255): <input type="text" id="borderRed" value=""> <br>
+    Border Green (0-255): <input type="text" id="borderGreen" value=""> <br>
+    Border Blue (0-255): <input type="text" id="borderBlue" value=""> <br>
+    Border Width: <input type="text" id="borderWidth" value=""> <br>
+    Background Red (0-255): <input type="text" id="bgRed" value=""> <br>
+    Background Green (0-255): <input type="text" id="bgGreen" value=""> <br>
+    Background Blue (0-255): <input type="text" id="bgBlue" value=""> <br>
+    <button onclick="change_color()">Change the color!</button> <br>
+
+    <p1>Please follow these links to visit other practices.</p1><br>
+          <a href="index.html">Index</a> <br>
+          <a href="practice1.html">Practice1</a> <br>
+          <a href="practice3.html">Practice3</a> <br>
+          <a href="practice4.html">Practice4</a> <br>
+
+</body>
+
+</html>
